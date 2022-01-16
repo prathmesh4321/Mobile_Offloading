@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.group60.project.Master">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="203dp"
+        android:layout_height="40dp"
+        android:text="MASTER MODE"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <ToggleButton
+        android:id="@+id/Bluetoothswitch"
+        android:layout_width="136dp"
+        android:layout_height="67dp"
+        android:text="ToggleButton"
+        android:textOff="Bluetooth OFF"
+        android:textOn="Bluetooth ON"
+        app:layout_constraintBottom_toTopOf="@+id/devicediscoverylist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.877" />
+
+    <Button
+        android:id="@+id/bluetoothdiscovery"
+        android:layout_width="179dp"
+        android:layout_height="65dp"
+        android:text="Start Bluetooth Device Discovery"
+        app:layout_constraintBottom_toTopOf="@+id/devicediscoverylist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toEndOf="@+id/Bluetoothswitch"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.879" />
+
+    <ListView
+        android:id="@+id/devicediscoverylist"
+        style="@android:style/Widget.DeviceDefault.ExpandableListView"
+        android:layout_width="321dp"
+        android:layout_height="157dp"
+        android:background="#A19D9D"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        tools:visibility="visible"></ListView>
+
+    <ListView
+        android:id="@+id/chosendeviceslist"
+        android:layout_width="319dp"
+        android:layout_height="124dp"
+        android:background="#B1AEAE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/devicediscoverylist"
+        app:layout_constraintVertical_bias="0.638" />
+
+    <Button
+        android:id="@+id/matrixmultiplication"
+        android:layout_width="239dp"
+        android:layout_height="69dp"
+        android:text="Matrix Multiplication"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chosendeviceslist"
+        app:layout_constraintVertical_bias="0.655" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="308dp"
+        android:layout_height="29dp"
+        android:text="STATUS"
+        app:layout_constraintBottom_toTopOf="@+id/chosendeviceslist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/devicediscoverylist"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <TextView
+        android:id="@+id/masterbattery"
+        android:layout_width="136dp"
+        android:layout_height="41dp"
+        android:text="My Battery"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.477" />
+
+    <TextView
+        android:id="@+id/masterlattitude"
+        android:layout_width="148dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="2dp"
+        android:text="My Lattitude"
+        app:layout_constraintBottom_toTopOf="@+id/chosendeviceslist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintStart_toEndOf="@+id/masterbattery"
+        app:layout_constraintTop_toBottomOf="@+id/status"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/masterlongitude"
+        android:layout_width="147dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="3dp"
+        android:text="My Longitude"
+        app:layout_constraintBottom_toTopOf="@+id/chosendeviceslist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.821"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/masterlattitude"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/logs"
+        android:layout_width="310dp"
+        android:layout_height="92dp"
+        android:text="Logs"
+        app:layout_constraintBottom_toTopOf="@+id/chosendeviceslist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/devicediscoverylist"
+        app:layout_constraintVertical_bias="0.909" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
